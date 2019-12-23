@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Basic from './views/basic.jsx';
 import MyRefs from './views/refs.jsx';
+import ErrorBoundary from './views/error_boundary.jsx';
 
 function App() {
     return (
@@ -17,6 +18,9 @@ function App() {
                         <li>
                             <Link to="/refs">refs</Link>
                         </li>
+                        <li>
+                            <Link to="/error">error_boundary</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -28,6 +32,9 @@ function App() {
                     </Route>
                     <Route path="/refs">
                         <MyRefs />
+                    </Route>
+                    <Route path="/error">
+                        <ErrorBoundary/>
                     </Route>
                 </Switch>
             </div>
