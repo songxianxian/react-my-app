@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Basic from './views/basic.jsx';
 import MyRefs from './views/refs.jsx';
 import ErrorBoundary from './views/error_boundary.jsx';
+import Portal from './views/Portal.jsx';
 
 function App() {
     return (
@@ -21,6 +22,9 @@ function App() {
                         <li>
                             <Link to="/error">error_boundary</Link>
                         </li>
+                        <li>
+                            <Link to="/portal">插槽</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -35,6 +39,9 @@ function App() {
                     </Route>
                     <Route path="/error">
                         <ErrorBoundary/>
+                    </Route>
+                    <Route path="/portal">
+                        <Portal />
                     </Route>
                 </Switch>
             </div>
