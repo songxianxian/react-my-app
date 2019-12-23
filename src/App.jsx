@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Basic from './views/basic.jsx';
+import MyRefs from './views/refs.jsx';
 
 function App() {
     return (
@@ -13,6 +14,9 @@ function App() {
                         <li>
                             <Link to="/basic">Basic</Link>
                         </li>
+                        <li>
+                            <Link to="/refs">refs</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -21,6 +25,9 @@ function App() {
                 <Switch>
                     <Route path="/basic">
                         <Basic />
+                    </Route>
+                    <Route path="/refs">
+                        <MyRefs />
                     </Route>
                 </Switch>
             </div>
