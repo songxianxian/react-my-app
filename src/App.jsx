@@ -10,6 +10,7 @@ import MyContext from './views/MyContext.jsx';
 import Life from './views/Life.jsx';
 import CreateElement from './views/CreateElement.jsx';
 import RenderProps from './views/RenderProps.jsx';
+import MyPropTypes from './views/PropTypes.jsx';
 
 function App() {
     return (
@@ -41,6 +42,9 @@ function App() {
                         <li>
                             <Link to="/renderProps">Render Props</Link>
                         </li>
+                        <li>
+                            <Link to="/propTypes">PropTypes</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -67,6 +71,9 @@ function App() {
                     </Route>
                     <Route path="/renderProps">
                         <RenderProps/>
+                    </Route>
+                    <Route path="/propTypes">
+                        <MyPropTypes/>
                     </Route>
                 </Switch>
             </div>
