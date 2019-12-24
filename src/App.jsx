@@ -7,6 +7,7 @@ import MyRefs from './views/refs.jsx';
 import ErrorBoundary from './views/error_boundary.jsx';
 import Portal from './views/Portal.jsx';
 import MyContext from './views/MyContext.jsx';
+import Life from './views/Life.jsx';
 
 function App() {
     return (
@@ -29,6 +30,9 @@ function App() {
                         <li>
                             <Link to="/context">context</Link>
                         </li>
+                        <li>
+                            <Link to="/life">生命周期</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -46,6 +50,9 @@ function App() {
                     </Route>
                     <Route path="/context">
                         <MyContext />
+                    </Route>
+                    <Route path="/life">
+                        <Life/>
                     </Route>
                 </Switch>
             </div>
