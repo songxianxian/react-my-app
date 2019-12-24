@@ -9,6 +9,7 @@ import Portal from './views/Portal.jsx';
 import MyContext from './views/MyContext.jsx';
 import Life from './views/Life.jsx';
 import CreateElement from './views/CreateElement.jsx';
+import RenderProps from './views/RenderProps.jsx';
 
 function App() {
     return (
@@ -37,6 +38,9 @@ function App() {
                         <li>
                             <Link to="/createElement">React.createElement 深入JSX</Link>
                         </li>
+                        <li>
+                            <Link to="/renderProps">Render Props</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -60,6 +64,9 @@ function App() {
                     </Route>
                     <Route path="/createElement">
                         <CreateElement/>
+                    </Route>
+                    <Route path="/renderProps">
+                        <RenderProps/>
                     </Route>
                 </Switch>
             </div>
