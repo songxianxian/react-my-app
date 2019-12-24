@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createElement } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import ErrorBoundary from './views/error_boundary.jsx';
 import Portal from './views/Portal.jsx';
 import MyContext from './views/MyContext.jsx';
 import Life from './views/Life.jsx';
+import CreateElement from './views/CreateElement.jsx';
 
 function App() {
     return (
@@ -33,6 +34,9 @@ function App() {
                         <li>
                             <Link to="/life">生命周期</Link>
                         </li>
+                        <li>
+                            <Link to="/createElement">React.createElement 深入JSX</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -53,6 +57,9 @@ function App() {
                     </Route>
                     <Route path="/life">
                         <Life/>
+                    </Route>
+                    <Route path="/createElement">
+                        <CreateElement/>
                     </Route>
                 </Switch>
             </div>
