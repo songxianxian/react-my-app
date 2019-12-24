@@ -28,14 +28,26 @@ class ThemedButton extends React.Component {
     // Assign a contextType to read the current theme context.
     // React will find the closest theme Provider above and use its value.
     // In this example, the current theme is "dark".
-    static contextType = ThemeContext;
+    //第一种
+    // static contextType = ThemeContext;
     
     render() {
         console.log('render this.context==', this.context);
         
-        return <Button theme={this.context} />;
+        // return <Button theme={this.context} />;
+
+        //第三种 ThemeContext.Consumer 适用于存在多个Context
+        return (
+            <ThemeContext.Consumer>
+                {
+                    (theme) => <Button theme={theme} />
+                }
+            </ThemeContext.Consumer>
+        )
     }
 }
+//第二种
+ThemedButton.contextType = ThemeContext;
 
 function Button (props) {
     return <button style={{backgroundColor: props.theme}}>按钮</button>
