@@ -6,6 +6,7 @@ import Basic from './views/basic.jsx';
 import MyRefs from './views/refs.jsx';
 import ErrorBoundary from './views/error_boundary.jsx';
 import Portal from './views/Portal.jsx';
+import MyContext from './views/MyContext.jsx';
 
 function App() {
     return (
@@ -25,6 +26,9 @@ function App() {
                         <li>
                             <Link to="/portal">插槽</Link>
                         </li>
+                        <li>
+                            <Link to="/context">context</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -40,8 +44,8 @@ function App() {
                     <Route path="/error">
                         <ErrorBoundary/>
                     </Route>
-                    <Route path="/portal">
-                        <Portal />
+                    <Route path="/context">
+                        <MyContext />
                     </Route>
                 </Switch>
             </div>
