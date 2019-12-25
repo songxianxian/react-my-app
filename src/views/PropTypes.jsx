@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 
 export default class Demo extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
-    render () {
+    render() {
         return (
             <div>
                 {/* <Greeting name={33}/> */}
-                <Greeting name="zhansan"/>
+                <Greeting name="zhansan" />
             </div>
-        )
+        );
     }
 }
 
@@ -22,4 +22,8 @@ class Greeting extends React.Component {
 }
 Greeting.propTypes = {
     name: PropTypes.string
-}
+};
+
+
+
+
