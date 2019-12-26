@@ -12,6 +12,7 @@ import CreateElement from './views/CreateElement.jsx';
 import RenderProps from './views/RenderProps.jsx';
 import MyPropTypes from './views/PropTypes.jsx';
 import HighOrderComponent from './views/HighOrderComponent.jsx';
+import Hooks from './views/Hooks.jsx';
 
 function App() {
     return (
@@ -49,6 +50,9 @@ function App() {
                         <li>
                             <Link to="/highOrderComponent">高阶组件</Link>
                         </li>
+                        <li>
+                            <Link to="/hooks">Hooks</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -81,6 +85,9 @@ function App() {
                     </Route>
                     <Route path="/highOrderComponent">
                         <HighOrderComponent/>
+                    </Route>
+                    <Route path="/hooks">
+                        <Hooks/>
                     </Route>
                 </Switch>
             </div>
