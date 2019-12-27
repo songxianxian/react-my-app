@@ -37,9 +37,9 @@ class ErrorBoundary extends React.Component {    //仅类组件可以成为错�
             hasError: true,
         }
     }
-    componentDidCatch (error, info) { //与 static getDerivedStateFromError 二选其一， 页可以两个同时存在
+    componentDidCatch (error, info) { //与 static getDerivedStateFromError 二选其一， 也可以两个同时存在
         console.log('error==', error);
-        
+         
         // this.setState({
         //     hasError: true
         // })
