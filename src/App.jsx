@@ -12,6 +12,7 @@ import RouteConfig from './pages/RouteConfig'
 import ModalGallery from './pages/ModalGallery'
 import StaticRouter from './pages/StaticRouter'
 import QueryParams from './pages/QueryParams'
+import LoadableDemo from './pages/Loadable'
 
 function App(props) {
     return (
@@ -81,9 +82,14 @@ function App(props) {
                 <StaticRouter/>
             </div> */}
 
-            <div>
+            {/* <div>
                 <h2>QueryParams</h2>
                 <QueryParams/>
+            </div> */}
+
+            <div>
+                <h2>LoadableDemo</h2>
+                <LoadableDemo/>
             </div>
         </div>
     );

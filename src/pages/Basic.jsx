@@ -24,6 +24,19 @@ function Basic() {
                     </li>
                 </ul>
 
+               
+                {/* <Route path="/">
+                    {" "}
+                    <Home />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/topics">
+                    <Topics />
+                </Route> */}
+               
+
                 {/* 
                  A <Switch> looks through all its children <Route>
           elements and renders the first one whose path
@@ -31,9 +44,10 @@ function Basic() {
           you have multiple routes, but you want only one
           of them to render at a time
                  */}
-                 
-                <Switch>
-                    <Route exact path="/"> {/* exact 严格匹配路径 eg: /a 就不能访问到home组件 */}
+                 {/* exact 严格匹配路径,  match the entire URL eg: /a 就不能访问到home组件 */}
+                {/* <Switch>
+                    <Route exact path="/">
+                        {" "}
                         <Home />
                     </Route>
                     <Route path="/about">
@@ -42,7 +56,7 @@ function Basic() {
                     <Route path="/topics">
                         <Topics />
                     </Route>
-                </Switch>
+                </Switch> */}
             </div>
         </Router>
     );
@@ -97,8 +111,8 @@ function Topics() {
 
 function Topic() {
     let params = useParams();
-    console.log('basic useParams==', params);
-    
+    console.log("basic useParams==", params);
+
     return <h3>Requested topic ID: {params.topicId}</h3>;
 }
 export default Basic;
